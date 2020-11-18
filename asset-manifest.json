@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/harry-the-handyman/static/css/main.fce9278a.chunk.css",
+    "main.js": "/harry-the-handyman/static/js/main.3144dd86.chunk.js",
+    "main.js.map": "/harry-the-handyman/static/js/main.3144dd86.chunk.js.map",
+    "runtime-main.js": "/harry-the-handyman/static/js/runtime-main.fb12a4ba.js",
+    "runtime-main.js.map": "/harry-the-handyman/static/js/runtime-main.fb12a4ba.js.map",
+    "static/css/2.43b2b750.chunk.css": "/harry-the-handyman/static/css/2.43b2b750.chunk.css",
+    "static/js/2.2e167bba.chunk.js": "/harry-the-handyman/static/js/2.2e167bba.chunk.js",
+    "static/js/2.2e167bba.chunk.js.map": "/harry-the-handyman/static/js/2.2e167bba.chunk.js.map",
+    "index.html": "/harry-the-handyman/index.html",
+    "static/css/2.43b2b750.chunk.css.map": "/harry-the-handyman/static/css/2.43b2b750.chunk.css.map",
+    "static/css/main.fce9278a.chunk.css.map": "/harry-the-handyman/static/css/main.fce9278a.chunk.css.map",
+    "static/js/2.2e167bba.chunk.js.LICENSE.txt": "/harry-the-handyman/static/js/2.2e167bba.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fb12a4ba.js",
+    "static/css/2.43b2b750.chunk.css",
+    "static/js/2.2e167bba.chunk.js",
+    "static/css/main.fce9278a.chunk.css",
+    "static/js/main.3144dd86.chunk.js"
+  ]
+}
