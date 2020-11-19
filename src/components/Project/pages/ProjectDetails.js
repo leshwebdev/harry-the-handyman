@@ -69,7 +69,7 @@ function ProjectDetails(props) {
         </Card.Body>
         <Card.Footer className="d-flex justify-content-between text-muted">
           <Button variant="primary" onClick={() => history.go(-1)}>Back</Button>
-          {props.location.state.currUser && <Button variant="danger" onClick={() => deleteThing('projects', id)}>Delete Project</Button>}
+          {props.location.state.currUser.isAdmin && <Button variant="danger" onClick={() => deleteThing('projects', id)}>Delete Project</Button>}
         </Card.Footer>
       </Card>
     </div>
