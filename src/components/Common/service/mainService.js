@@ -7,19 +7,19 @@ export default {
     save,
     remove
 }
+// WIP:
 
-// console.log(process.env.NODE_ENV);
-let BASE_URL = null;
+// let BASE_URL = null; 
 
-if (process.env.NODE_ENV === 'development') {
-    BASE_URL = 'https://harry-the-handyman-backend.herokuapp.com';
-} else {
-    console.log(process.env.NODE_ENV);
-    console.log(process.env.REACT_APP_BASE_URL);
-    BASE_URL = process.env.REACT_APP_BASE_URL;
-  }
+// if (process.env.NODE_ENV === 'development') {
+//     BASE_URL = 'https://harry-the-handyman-backend.herokuapp.com';
+// } else {
+//     console.log(process.env.NODE_ENV);
+//     console.log(process.env.REACT_APP_BASE_URL); //am getting UNDEFINED
+//     BASE_URL = process.env.REACT_APP_BASE_URL;
+//   }
 
-// const BASE_URL = 'https://harry-the-handyman-backend.herokuapp.com'; // dangerous...
+const BASE_URL = 'https://harry-the-handyman-backend.herokuapp.com'; // dangerous...
 // const BASE_URL = 'https://my-json-server.typicode.com/leshwebdev/handyman-backend'; // this one is read only !
 // const BASE_URL = '//localhost:3000'; // this one is for local developing.
 
