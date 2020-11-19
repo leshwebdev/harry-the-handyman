@@ -22,7 +22,6 @@ function Users(props) {
       password: {value: password, required: true, errors: []},
       cart: {value: cart, required: false, errors: []},
       favProjects: {value: favProjects, required: false, errors: []}
-      // passwordVerify: {value:'', required: false, errors: []}
     },
     isEditingUser: false,
     bannerIsShown: false,
@@ -47,7 +46,11 @@ function Users(props) {
     e.preventDefault();
     if (Object.keys(state.field).every((k) => state.field[k].errors.length === 0)) {
       saveChangesToDB(state.field); 
-      setState((state) => ({ ...state, msg : `User: "${state.field.username.value}" has been updated.`, bannerIsShown: true }));
+      setState((state) => ({ ...state, msg: 
+        <div className="d-flex align-items-center justify-content-around">
+          <h3>User "{state.field.username.value}" has been updated.</h3>
+        </div>, 
+        bannerIsShown: true }));
       setTimeout(() => {
         props.onReloadFromDB('users');
         setState(state => ({ ...state, isEditingUser: !state.isEditingUser, bannerIsShown: false }));

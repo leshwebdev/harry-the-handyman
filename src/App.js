@@ -48,12 +48,21 @@ const App = ({ location }) => {
     const authUser = mainService.authenticate(username.value, password.value)
     .then(result => {
       if (result === "no such user") {
-        setState((state) => ({ ...state, msg: `No Such User. Perhaps you need to sign up ?`, bannerIsShown: true }));
+        setState((state) => ({ ...state, msg: 
+          <div className="d-flex flex-column align-items-center justify-content-around">
+            <h2>No Such User...</h2>
+            <h2>Perhaps you need to sign up ?</h2>
+          </div>, 
+          bannerIsShown: true }));
         setTimeout(() => {
           setState((state) => ({ ...state, msg: '', bannerIsShown: false }));
         }, 3000);
       } else if (result === "wrong password") {
-        setState((state) => ({ ...state, msg: `Wrong Password...`, bannerIsShown: true }));
+        setState((state) => ({ ...state, msg: 
+          <div className="d-flex flex-column align-items-center justify-content-around">
+            <h2>Wrong Password...</h2>
+          </div>, 
+          bannerIsShown: true }));
         setTimeout(() => {
           setState((state) => ({ ...state, msg: '', bannerIsShown: false }));
         }, 3000);
@@ -83,7 +92,7 @@ const App = ({ location }) => {
   const signOut = () => {
     setState((state) => ({ ...state, msg: 
       <div className="d-flex align-items-center justify-content-around">
-        <div>See You Soon, {state.currUser.fullName.split(' ').shift()}</div>
+        <h2>See You Soon, {state.currUser.fullName.split(' ').shift()}!</h2>
       </div>,
       bannerIsShown: true }));
       setTimeout(() => {
