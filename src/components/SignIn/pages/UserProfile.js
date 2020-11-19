@@ -53,7 +53,7 @@ function UserProfile(props) {
           </Card.Text>
         </Card.Body>
         <Card.Footer className="text-muted">
-          <Button variant="primary" onClick={() => history.go(-1)}>Back</Button>
+          <Button variant="primary" onClick={() => history.push("/projects")}>Back</Button>
         </Card.Footer>
       </Card>
     </div>
