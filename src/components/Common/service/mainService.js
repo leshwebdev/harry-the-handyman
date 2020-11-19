@@ -15,6 +15,7 @@ if (process.env.NODE_ENV === 'development') {
     BASE_URL = 'https://harry-the-handyman-backend.herokuapp.com';
 } else {
     console.log(process.env.NODE_ENV);
+    console.log(process.env.REACT_APP_BASE_URL);
     BASE_URL = process.env.REACT_APP_BASE_URL;
   }
 
