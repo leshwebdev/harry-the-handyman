@@ -34,7 +34,8 @@ function ProjectDetails(props) {
     const projCost = necItems.reduce((acc, num) => acc + num.cost, 0);
     setState(state => ({ ...state, necItems: necItems, projectCost: projCost }));
   }, [allItems, necItemIds, currUserFavProjects])
-
+  
+  // TODO: need to add "add all needed items to cart" functionality.
     return (
       <div className="container flex col">
       <h2 className="mb-2">{name}</h2>
@@ -49,14 +50,12 @@ function ProjectDetails(props) {
           <Card.Text>
             <div className="flex align-items-center">
               <Col sm={3} md={3}>
-                <Card.Img variant="top" className="item-img" src={imgUrl} />
+                <Card.Img variant="top" className="img-fluid" src={imgUrl} />
               </Col>
               <Col sm={9} md={9}>
                 <div className="flex col">
                   <div>Cost: <span className="font-weight-bold">${state.projectCost}</span></div>
                   <div>Quantity In Stock: <span className="font-weight-bold">{quantity} pcs</span></div>
-                  {/* need to add "Instructions for the build" */}
-                  {/* need to add "add all needed items to cart" functionality */}
                   <div><span className="font-weight-bold">Items required for the build:</span></div>
                   <NecItems items={state.necItems} />
                   <div className="mt-2">

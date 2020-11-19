@@ -86,9 +86,9 @@ const App = ({ location }) => {
         <div>See You Soon, {state.currUser.fullName.split(' ').shift()}</div>
       </div>,
       bannerIsShown: true }));
-      history.push("/")
-    setTimeout(() => {
-      setState((state) => ({ ...state, msg: '', isSignedIn: false, currUser: null, bannerIsShown: false }));
+      setTimeout(() => {
+        history.push("/")
+        setState((state) => ({ ...state, msg: '', isSignedIn: false, currUser: null, bannerIsShown: false }));
     }, 3000);
   }
 
@@ -182,7 +182,7 @@ const App = ({ location }) => {
       <TransitionGroup>
         <CSSTransition key={currentKey} classNames="fade" timeout={{ enter: 500, exit: 500 }} appear>
           <Switch location={location}>
-            {/* sending functions via this "render" method seems to be activating these function when navigating to the page...*/}
+            {/* sending functions via this "render" method seems to be activating these function when navigating to the page...maybe i need to change them from "const" to "funtion"...*/}
             {/* if i use the below "render" method, the "Link" in the Projects doesn't pass the State params to the ProjectDetails page... */}
             <Route exact path="/" render={() => (<Home isSignedIn={state.isSignedIn} currUser={state.currUser} onSignIn={signIn} onSignUp={signUp}/>)} /> 
             <Route exact path="/profile" render={() => (<UserProfile isSignedIn={state.isSignedIn} currUser={state.currUser}/>)} /> 
