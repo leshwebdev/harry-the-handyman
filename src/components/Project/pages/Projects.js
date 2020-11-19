@@ -38,10 +38,8 @@ function Projects(props) {
               <Row className="align-items-center">
                 <Col sm={3} md={2} className="d-flex justify-content-center"><img className="item-img" src={project.imgUrl} alt="" /></Col>
                   <Col sm={8} md={7} className="mb-2">
-                    {/* <div className="d-flex flex-column align-items-center"> */}
                       <div className="kind">{project.name}</div>
                       <div className="">Quantity In Stock: {project.quantity} pcs</div>
-                    {/* </div> */}
                   </Col>
                   <Col sm={8} md={2} className="mx-auto">
                     <div>
