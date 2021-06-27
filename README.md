@@ -1,4 +1,6 @@
 # Welcome to Harry the Handyman's App !
+# Master Username and Password (just to get a feel for the app):
+# harry / Harry123
 
 # Getting Started with Create React App
 
